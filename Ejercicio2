@@ -1,0 +1,53 @@
+				
+  · Mostrar el historial de cambios del repositorio
+	git log
+	
+	· Crear la carpeta "capitulos" y el fichero "capitulo1.txt"
+	mkdir capitulos
+	echo "Git es un sistema de control de versiones ideado por Linus Torvalds." > capitulos/capitulo1.txt
+	
+	· Añadir los cambios al área de preparación
+	git add capitulos/capitulo1.txt
+	
+	· Hacer un commit de los cambios
+	git commit -m "Añadido capítulo 1."
+	
+	· Mostrar el historial de cambios del repositorio después del primer commit
+	git log
+	
+	· Crear el fichero "capitulo2.txt" en la carpeta "capitulos"
+	echo "El flujo de trabajo básico con Git consiste en: 
+    1- Hacer cambios en el repositorio. 2- Añadir los cambios a la zona de intercambio temporal. 3- Hacer un commit de los cambios." > capitulos/capitulo2.txt
+	
+	· Añadir los cambios al área de preparación
+	git add capitulos/capitulo2.txt
+	
+	· Hacer un commit de los cambios
+	git commit -m "Añadido capítulo 2."
+	
+	· Mostrar las diferencias entre la última versión y dos versiones anteriores
+	git diff HEAD~2 HEAD
+	
+	· Crear el fichero "capitulo3.txt" en la carpeta "capitulos"
+	echo "Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas." > capitulos/capitulo3.txt
+	
+	· Añadir los cambios al área de preparación
+	git add capitulos/capitulo3.txt
+	
+	· Hacer un commit de los cambios
+	git commit -m "Añadido capítulo 3."
+	
+	· Mostrar las diferencias entre la primera y la última versión del repositorio
+	git diff HEAD $(git rev-list --max-parents=0 HEAD)
+	
+	· Añadir al final del fichero "indice.txt"
+	echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+	
+	· Añadir los cambios al área de preparación
+	git add indice.txt
+	
+	· Hacer un commit de los cambios
+	git commit -m "Añadido capítulo 5 al índice."
+	
+	· Mostrar quién ha hecho cambios sobre el fichero "indice.txt"
+	git blame indice.txt
