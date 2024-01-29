@@ -1,0 +1,86 @@
+- Crear una nueva rama "bibliografia"
+git branch bibliografia
+
+- Mostrar las ramas del repositorio
+git branch
+
+- Cambiar a la rama "master"
+git checkout master
+
+- Crear el fichero "capitulos/capitulo4.txt" y añadir el texto
+echo "Contenido del capítulo 4" > capitulos/capitulo4.txt
+
+- Añadir los cambios a la zona de intercambio temporal
+git add capitulos/capitulo4.txt
+
+- Hacer un commit con el mensaje "Añadido capítulo 4."
+git commit -m "Añadido capítulo 4."
+
+- Mostrar la historia del repositorio incluyendo todas las ramas
+git log --all --graph --oneline
+
+- Cambiar a la rama "bibliografia"
+git checkout bibliografia
+
+- Crear el fichero "bibliografia.txt" y añadir la referencia
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+
+- Añadir los cambios a la zona de intercambio temporal
+git add bibliografia.txt
+
+- Hacer un commit con el mensaje "Añadida primera referencia bibliográfica."
+git commit -m "Añadida primera referencia bibliográfica."
+
+- Mostrar la historia del repositorio incluyendo todas las ramas
+git log --all --graph --oneline
+
+- Cambiar a la rama "master"
+git checkout master
+
+- Fusionar la rama "bibliografia" con la rama "master"
+git merge bibliografia
+
+- Mostrar la historia del repositorio incluyendo todas las ramas
+git log --all --graph --oneline
+
+- Eliminar la rama "bibliografia"
+git branch -d bibliografia
+
+- Mostrar de nuevo la historia del repositorio incluyendo todas las ramas
+git log --all --graph --oneline
+
+- Crear la rama "bibliografia"
+git branch bibliografia
+
+- Cambiar a la rama "bibliografia"
+git checkout bibliografia
+
+- Cambiar el fichero "bibliografia.txt" para contener nuevas referencias
+echo -e "Scott Chacon and Ben Straub. Pro Git. Apress.\nRyan Hodson. Ry’s Git Tutorial. Smashwords (2014)" > bibliografia.txt
+
+- Añadir los cambios a la zona de intercambio temporal
+git add bibliografia.txt
+
+- Hacer un commit con el mensaje "Añadida nueva referencia bibliográfica."
+git commit -m "Añadida nueva referencia bibliográfica."
+
+- Cambiar a la rama "master"
+git checkout master
+
+- Cambiar el fichero "bibliografia.txt" en la rama "master" para contener nuevas referencias
+echo -e "Chacon, S. and Straub, B. Pro Git. Apress.\nLoeliger, J. and McCullough, M. Version control with Git. O’Reilly." > bibliografia.txt
+
+- Añadir los cambios a la zona de intercambio temporal
+git add bibliografia.txt
+
+- Hacer un commit con el mensaje "Añadida nueva referencia bibliográfica."
+git commit -m "Añadida nueva referencia bibliográfica."
+
+- Fusionar la rama "bibliografia" con la rama "master"
+git merge bibliografia
+
+- Resolver el conflicto y hacer un commit con el mensaje "Resuelto conflicto de bibliografía."
+git commit -m "Resuelto conflicto de bibliografía."
+
+- Mostrar la historia del repositorio incluyendo todas las ramas
+git log --all --graph --oneline
