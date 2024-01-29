@@ -1,0 +1,94 @@
+- Eliminar la última línea del fichero indice.txt y guardarlo:
+nano indice.txt (elimino la última línea y guarda los cambios.)
+
+- Comprobar el estado del repositorio:
+git status
+
+- Deshacer los cambios realizados en el fichero indice.txt para volver a la versión anterior del fichero:
+git checkout indice.txt
+
+- Volver a comprobar el estado del repositorio:
+git status
+
+- Eliminar la última línea del fichero indice.txt y guardarlo:
+nano indice.txt (elimino la última línea y guarda los cambios.)
+
+- Añadir los cambios a la zona de intercambio temporal:
+git add indice.txt
+
+- Comprobar de nuevo el estado del repositorio:
+git status
+
+- Quitar los cambios de la zona de intercambio temporal, pero mantenerlos en el directorio de trabajo:
+git restore --staged indice.txt
+
+- Comprobar de nuevo el estado del repositorio:
+git status
+
+- Deshacer los cambios realizados en el fichero indice.txt para volver a la versión anterior del fichero:
+git checkout indice.txt
+
+- Volver a comprobar el estado del repositorio:
+git status
+
+- Eliminar la última línea del fichero indice.txt y guardarlo:
+nano indice.txt (elimino la última línea y guarda los cambios.)
+
+- Eliminar el fichero capitulos/capitulo3.txt:
+rm capitulos/capitulo3.txt
+
+- Añadir un fichero nuevo capitulos/capitulo4.txt vacío:
+touch capitulos/capitulo4.txt
+
+- Añadir los cambios a la zona de intercambio temporal:
+git add .
+
+- Comprobar de nuevo el estado del repositorio:
+git status
+
+- Quitar los cambios de la zona de intercambio temporal, pero mantenerlos en el directorio de trabajo:
+git restore --staged .
+
+- Comprobar de nuevo el estado del repositorio:
+git status
+
+- Deshacer los cambios realizados para volver a la versión del repositorio:
+git restore .
+
+- Volver a comprobar el estado del repositorio:
+git status
+
+- Eliminar la última línea del fichero indice.txt y guardarlo:
+nano indice.txt (elimino la última línea y guarda los cambios.)
+
+- Eliminar el fichero capitulos/capitulo3.txt:
+rm capitulos/capitulo3.txt
+
+- Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Borrado accidental.”:
+git add .
+git commit -m "Borrado accidental."
+
+- Comprobar el historial del repositorio:
+git log
+
+- Deshacer el último commit pero mantener los cambios anteriores en el directorio de trabajo y la zona de intercambio temporal:
+git reset HEAD~1
+
+- Comprobar el historial y el estado del repositorio:
+git log
+git status
+
+- Volver a hacer el commit con el mismo mensaje de antes:
+git commit -c ORIG_HEAD
+
+- Deshacer el último commit y los cambios anteriores del directorio de trabajo volviendo a la versión anterior del repositorio:
+git reset --hard HEAD~1
+
+- Comprobar de nuevo el historial y el estado del repositorio:
+git log
+git status
+
+  
+
+
+
